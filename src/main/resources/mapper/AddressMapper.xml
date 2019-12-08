@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmu.address.mapper.AddressMapper">
+    <select id="findAddressById" parameterType="Integer" resultType="Address">
+            select id,
+                   gmt_create,
+                   gmt_modified,
+                   is_deleted,
+                   county_id,
+                   province_id,
+                   city_id,
+                   address_detail,
+                   postal_code,
+                   consignee,
+                   mobile,
+                   is_default,
+                   user_id
+            from address where id = #{id}
+    </select>
+    <insert id="addAddress" parameterType="Address" useGeneratedKeys="true" keyProperty="id">
+        insert into address(user_id,city_id,province_id,county_id,address_detail,mobile,postal_code,consignee,is_default,gmt_create,gmt_modified,is_deleted)
+        values (#{userId},#{cityId},#{provinceId},#{countyId},#{addressDetail},#{mobile},#{postalCode}, #{consignee}, #{beDefault}, #{gmtCreate},#{gmtModified},#{beDeleted})
+    </insert>
+    <update id="updateAddress" parameterType="Address">
+        update address
+        <trim prefix="set" suffixOverrides=",">
+            <if test="userId!=null">user_id=#{userId},</if>
+            <if test="cityId!=null">city_id=#{cityId},</if>
+            <if test="provinceId!=null">province_id=#{provinceId},</if>
+            <if test="countyId!=null">county_id=#{countyId},</if>
+            <if test="addressDetail!=null">address_detail=#{addressDetail},</if>
+            <if test="mobile!=null">mobile=#{mobile},</if>
+            <if test="postalCode!=null">postal_code=#{postalCode},</if>
+            <if test="consignee!=null">consignee=#{consignee},</if>
+            <if test="beDefault!=null">is_default=#{beDefault},</if>
+            <if test="gmtCreate!=null">gmt_create=#{gmtCreate},</if>
+            <if test="gmtModified!=null">gmt_modified=#{gmtModified},</if>
+            <if test="beDeleted!=null">is_delete=#{beDelete},</if>
+        </trim>
+        WHERE id=#{id}
+    </update>
+    <delete id="deleteAddress" parameterType="Integer">
+        delete from address where id=#{id}
+    </delete>
+    <select id="findAllAddress" parameterType="Integer" resultMap="addressList">
+        select *from address where user_id=#{userId}
+    </select>
+    <resultMap id="addressList" type="Address">
+        <id column="id" property="id" />
+        <result column="userId" property="user_id" />
+        <result column="cityId" property="city_id" />
+        <result column="provinceId" property="province_id" />
+        <result column="countyId" property="county_id" />
+        <result column="countyId" property="county_id" />
+        <result column="addressDetail" property="address_detail" />
+        <result column="mobile" property="mobile" />
+        <result column="postalCode" property="postal_code" />
+        <result column="consignee" property="consignee" />
+        <result column="beDefault" property="is_default" />
+        <result column="gmtCreate" property="gmt_create" />
+        <result column="gmtModified" property="gmt_modified" />
+        <result column="beDeleted" property="is_delete" />
+    </resultMap>
+
+</mapper>
