@@ -2,6 +2,9 @@ package com.xmu.address.dao;
 
 import com.xmu.address.domain.address.Address;
 import com.xmu.address.mapper.AddressMapper;
+import com.xmu.address.service.AddressService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +12,7 @@ import java.util.List;
 
 @Repository
 public class AddressDao {
+    private static final Logger logger = LoggerFactory.getLogger(AddressService.class);
     @Autowired
     private AddressMapper addressMapper;
 

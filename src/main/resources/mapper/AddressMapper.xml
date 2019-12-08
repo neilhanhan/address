@@ -47,19 +47,19 @@
     </select>
     <resultMap id="addressList" type="Address">
         <id column="id" property="id" />
-        <result column="userId" property="user_id" />
-        <result column="cityId" property="city_id" />
-        <result column="provinceId" property="province_id" />
-        <result column="countyId" property="county_id" />
-        <result column="countyId" property="county_id" />
-        <result column="addressDetail" property="address_detail" />
-        <result column="mobile" property="mobile" />
-        <result column="postalCode" property="postal_code" />
-        <result column="consignee" property="consignee" />
-        <result column="beDefault" property="is_default" />
-        <result column="gmtCreate" property="gmt_create" />
-        <result column="gmtModified" property="gmt_modified" />
-        <result column="beDeleted" property="is_delete" />
+        <result property="userId" column="user_id" />
+        <result property="cityId" column="city_id" />
+        <result property="provinceId" column="province_id" />
+        <result property="countyId" column="county_id" />
+        <result property="countyId" column="county_id" />
+        <result property="addressDetail" column="address_detail" />
+        <result property="mobile" column="mobile" />
+        <result property="postalCode" column="postal_code" />
+        <result property="consignee" column="consignee" />
+        <result property="beDefault" column="is_default" />
+        <result property="gmtCreate" column="gmt_create" />
+        <result property="gmtModified" column="gmt_modified" />
+        <result property="beDeleted" column="is_delete" />
     </resultMap>
 
 </mapper>
