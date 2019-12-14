@@ -1,0 +1,78 @@
+2019-12-08 16:21:41.143 [main] INFO  com.xmu.address.AddressApplication - Starting AddressApplication on LAPTOP-O7RFFOA8 with PID 21524 (C:\Users\97392\IdeaProjects\address\target\classes started by 97392 in C:\Users\97392\IdeaProjects\address)
+2019-12-08 16:21:41.187 [main] INFO  com.xmu.address.AddressApplication - No active profile set, falling back to default profiles: default
+2019-12-08 16:21:43.645 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-08 16:21:43.671 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-12-08 16:21:43.672 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-08 16:21:43.673 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-08 16:21:43.693 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2019-12-08 16:21:43.694 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-12-08 16:21:43.694 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-12-08 16:21:43.747 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2019-12-08 16:21:43.914 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-08 16:21:43.914 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2604 ms
+2019-12-08 16:21:44.834 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 16:21:45.337 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-12-08 16:21:45.369 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 16:21:45.372 [main] INFO  com.xmu.address.AddressApplication - Started AddressApplication in 5.498 seconds (JVM running for 7.64)
+2019-12-08 16:22:00.865 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-08 16:22:00.865 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-08 16:22:00.871 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2019-12-08 16:22:01.034 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-08 16:22:03.604 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-08 18:01:13.416 [main] INFO  com.xmu.address.AddressApplication - Starting AddressApplication on LAPTOP-O7RFFOA8 with PID 9544 (C:\Users\97392\IdeaProjects\address\target\classes started by 97392 in C:\Users\97392\IdeaProjects\address)
+2019-12-08 18:01:13.438 [main] INFO  com.xmu.address.AddressApplication - No active profile set, falling back to default profiles: default
+2019-12-08 18:01:15.726 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-08 18:01:15.751 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-12-08 18:01:15.752 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-08 18:01:15.752 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-08 18:01:15.754 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2019-12-08 18:01:15.755 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-12-08 18:01:15.755 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-12-08 18:01:15.759 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2019-12-08 18:01:15.959 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-08 18:01:15.959 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2432 ms
+2019-12-08 18:01:16.764 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:01:17.186 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-12-08 18:01:17.200 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2019-12-08 18:01:17.200 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-12-08 18:01:17.205 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2019-12-08 18:01:17.205 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2019-12-08 18:01:17.225 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-08 18:01:17.230 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2019-12-08 18:01:17.232 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:01:30.763 [main] INFO  com.xmu.address.AddressApplication - Starting AddressApplication on LAPTOP-O7RFFOA8 with PID 14692 (C:\Users\97392\IdeaProjects\address\target\classes started by 97392 in C:\Users\97392\IdeaProjects\address)
+2019-12-08 18:01:30.766 [main] INFO  com.xmu.address.AddressApplication - No active profile set, falling back to default profiles: default
+2019-12-08 18:01:31.735 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-08 18:01:31.742 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-12-08 18:01:31.743 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-08 18:01:31.743 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-08 18:01:31.744 [main] INFO  o.a.c.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2019-12-08 18:01:31.745 [main] INFO  o.a.c.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-12-08 18:01:31.745 [main] INFO  o.a.c.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-12-08 18:01:31.748 [main] INFO  o.a.c.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2019-12-08 18:01:31.861 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-08 18:01:31.861 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1055 ms
+2019-12-08 18:01:32.266 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:01:32.516 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-12-08 18:01:32.543 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 18:01:32.547 [main] INFO  com.xmu.address.AddressApplication - Started AddressApplication in 2.525 seconds (JVM running for 3.912)
+2019-12-08 18:01:43.405 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-08 18:01:43.405 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-08 18:01:43.411 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2019-12-08 18:01:43.548 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-08 18:01:44.827 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.

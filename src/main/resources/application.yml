@@ -16,3 +16,8 @@ mybatis:
   configuration:
     #自动将SQL中查出来的带下划线的字段，转换为驼峰标志，再去匹配类中的属性
     map-underscore-to-camel-case: true
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params:
