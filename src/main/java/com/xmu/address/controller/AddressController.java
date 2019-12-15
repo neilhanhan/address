@@ -64,20 +64,27 @@ public class AddressController {
 		return addressService.addAddress(addressPo);
 	}
 
-
+	/**
+	 * 更新收货地址
+	 * @param id
+	 * @param addressPo
+	 * @return
+	 */
 	@PutMapping("/addresses/{id}")
 	public AddressPo update(@PathVariable("id") Integer id, @RequestBody AddressPo addressPo){
 		return addressService.updateAddressById(id,addressPo);
 	}
 
-//	/**
-//	 * 管理员获取地址列表
-//	 *
-//	 * @param id 用户id
-//	 * @param name 用户名
-//	 * @return 用户的地址列表
-//	 */
-//
-//	@GetMapping("/addresses")
-//	public List<Address> addressList(Integer id, String name);
+	/**
+	 * 管理员获取某用户某收货人的地址
+	 * @param userId
+	 * @param page
+	 * @param limit
+	 * @param consignee
+	 * @return
+	 */
+	@GetMapping("/admin/addresses")
+	public List<Address> getAddress(@RequestParam Integer userId,@RequestParam Integer page,@RequestParam Integer limit,@RequestParam String consignee){
+		return addressService.getAddress(userId,page,limit,consignee);
+	}
 }

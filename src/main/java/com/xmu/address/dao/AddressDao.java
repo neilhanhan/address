@@ -57,5 +57,16 @@ public class AddressDao {
         addressMapper.updateAddress(addressPo);
         return findAddressById(id);
     }
+    public List<Address> getAddress(Integer userId,Integer page,Integer limit,String consignee){
+        PageHelper.startPage(page,limit);
+        List<Address> addressList=addressMapper.getAddress(userId,consignee);
+        for (Address address:addressList
+        ) {
+            address.setProvince(addressMapper.findRegionById(address.getProvinceId()));
+            address.setCity(addressMapper.findRegionById(address.getCityId()));
+            address.setCounty(addressMapper.findRegionById(address.getCountyId()));
+        }
+        return addressList;
+    }
     }
 

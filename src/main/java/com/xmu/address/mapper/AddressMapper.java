@@ -53,7 +53,13 @@ public interface AddressMapper {
      */
     Integer updateAddress(AddressPo addressPo);
 
-
+    /**
+     * 管理员获取用户地址
+     * @param userId
+     * @param consignee
+     * @return
+     */
+    List<Address> getAddress(Integer userId,String consignee);
 
 
 }

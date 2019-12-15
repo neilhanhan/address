@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xmu.address.mapper.AddressMapper">
-    <select id="findAddressById" parameterType="Integer" resultType="Address">
+    <select id="findAddressById" parameterType="Integer" resultType="AddressPo">
             select * from address where id = #{id} and is_deleted=0
     </select>
     <insert id="addAddress" parameterType="AddressPo" useGeneratedKeys="true" keyProperty="id">
@@ -34,6 +34,9 @@
 
     <select id="list" resultType="Address" parameterType="Integer">
         select * from address where user_id=#{userId} and is_deleted=0
+    </select>
+    <select id="getAddress" resultType="Address" >
+        select * from address where user_id=#{userId} and is_deleted=0 and consignee=#{consignee}
     </select>
     <select id="findRegionById" parameterType="Integer" resultType="String">
         select name from region where id=#{id}
