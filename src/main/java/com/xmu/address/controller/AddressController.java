@@ -1,14 +1,13 @@
-package com.xmu.address.controller;/*
-package和import根据项目具体实现
- */
-
+package com.xmu.address.controller;
 import com.xmu.address.domain.address.Address;
 import com.xmu.address.domain.address.AddressPo;
 import com.xmu.address.service.AddressService;
-import org.apache.ibatis.annotations.Delete;
+import com.xmu.address.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -23,14 +22,23 @@ public class AddressController {
 
 	/**
 	 * 用户收货地址列表
-	 * @param userId
+	 * @param httpServletRequest
 	 * @param page
 	 * @param limit
 	 * @return
 	 */
 	@GetMapping("/addresses")
-	public List<Address> list(@RequestParam Integer userId,@RequestParam Integer page,@RequestParam Integer limit) {
-		return addressService.list(userId,page,limit);
+	public Object list(HttpServletRequest httpServletRequest, @RequestParam Integer page, @RequestParam Integer limit) {
+		Integer userId=Integer.parseInt(httpServletRequest.getHeader("userId"));
+		if(userId==null){
+			return ResponseUtil.unlogin();
+		}
+		List<Address> addressList=addressService.list(userId,page,limit);
+		if(addressList.size()<page*limit){
+			return ResponseUtil.badArgumentValue();
+		}
+		return ResponseUtil.ok(addressList);
+
 	}
 
 	/**
@@ -40,9 +48,14 @@ public class AddressController {
 	 */
 	@DeleteMapping("/address/{id}")
 	//这里用int表示删除操作成功与否
-	public int delete(@PathVariable("id") Integer id) {
-		return addressService.deleteAddressById(id);
-	};
+	public Object delete(@PathVariable("id") Integer id) {
+
+		Integer isDeleted=addressService.deleteAddressById(id);
+		if(isDeleted==0){
+			return ResponseUtil.badArgumentValue();
+		}
+		return ResponseUtil.ok();
+	}
 	/**
 	 * 收货地址详情
 	 *
@@ -50,8 +63,12 @@ public class AddressController {
 	 * @return 收货地址详情
 	 */
 	@GetMapping("/addresses/{id}")
-	public Address detail(@PathVariable("id") Integer id) {
-		return addressService.findAddressById(id);
+	public Object detail(@PathVariable("id") Integer id) {
+		Address address=addressService.findAddressById(id);
+		if(address==null){
+			return ResponseUtil.badArgumentValue();
+		}
+		return ResponseUtil.ok(address);
 	}
 
 	/**
@@ -71,20 +88,32 @@ public class AddressController {
 	 * @return
 	 */
 	@PutMapping("/addresses/{id}")
-	public AddressPo update(@PathVariable("id") Integer id, @RequestBody AddressPo addressPo){
-		return addressService.updateAddressById(id,addressPo);
+	public Object update(@PathVariable("id") Integer id, @RequestBody AddressPo addressPo){
+			addressPo=addressService.updateAddressById(id, addressPo);
+			if(addressPo==null){
+				return ResponseUtil.updatedDataFailed();
+			}
+			return ResponseUtil.ok(addressPo);
 	}
 
 	/**
-	 * 管理员获取某用户某收货人的地址
-	 * @param userId
+	 * 管理员获取用户收货地址
+	 * @param httpServletRequest
 	 * @param page
 	 * @param limit
 	 * @param consignee
 	 * @return
 	 */
 	@GetMapping("/admin/addresses")
-	public List<Address> getAddress(@RequestParam Integer userId,@RequestParam Integer page,@RequestParam Integer limit,@RequestParam String consignee){
-		return addressService.getAddress(userId,page,limit,consignee);
+	public Object getAddress(HttpServletRequest httpServletRequest,@RequestParam Integer page,@RequestParam Integer limit,@RequestParam String consignee){
+		Integer userId=Integer.parseInt(httpServletRequest.getHeader("userId"));
+		if(userId==null){
+			return ResponseUtil.unlogin();
+		}
+		List<Address> addressList=addressService.getAddress(userId,page,limit,consignee);
+		if(addressList.size()<page*limit){
+			return ResponseUtil.badArgumentValue();
+		}
+		return ResponseUtil.ok(addressList);
 	}
 }

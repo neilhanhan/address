@@ -22,7 +22,7 @@ public class AddressService {
 
     public AddressPo addAddress(AddressPo addressPo){return addressDao.addAddress(addressPo);}
 
-    public AddressPo updateAddressById(Integer id,AddressPo addressPo){return addressDao.updateAddressById(id,addressPo);}
+    public AddressPo updateAddressById(Integer id,AddressPo addressPo) {return addressDao.updateAddressById(id,addressPo);}
 
     public List<Address> getAddress(Integer userId,Integer page,Integer limit,String consignee){return addressDao.getAddress(userId,page,limit,consignee);}
 
